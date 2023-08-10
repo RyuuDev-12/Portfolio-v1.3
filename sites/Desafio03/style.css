@@ -1,0 +1,155 @@
+:root{
+    --azul-escuro: #292664;
+    --azul-forte: #6c63ff;
+    --azul-fraco: #d7d4ff;
+    --azul-fraco-variacao: #b8b6db;
+    --cinza-claro: #f9f9f9;
+}
+
+/* Reset */
+@import url(fontes/Lato-Regular.ttf);
+@import url(fontes/Merriweather-Bold.ttf);
+@import url(fontes/Merriweather-Regular.ttf);
+
+*{
+    font-family: "Lato";
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    color: var(--azul-escuro);
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+h1, h2, h3{
+    font-family:"Merriweather";
+    font-weight: 400;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+/* Section 1 */
+.parte1{
+    font-size: 10rem;
+    background-color: var(--azul-fraco);
+    display: flex;
+    padding: 5rem 7% 1rem;
+    justify-content: space-between;
+}
+
+.parte1 p{
+    margin:15px 0;
+}
+
+.parte1 p, h1{
+    max-width: 350px;
+    margin-right:200px;
+}
+
+button, .submit{
+    background-color: var(--azul-forte);
+    color: white;
+    box-shadow: var(--azul-fraco-variacao) 0px 5px 5px;
+    border:none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+img{
+    width: 400px;
+}
+
+/* Section 2 */
+
+.parte2{
+    margin: 2rem, 10%, 1rem;
+    background-color: var(--cinza-claro);
+}
+
+h3{
+    font-size: 2.3rem;
+    font-weight: bold;
+    padding: 1.5rem;
+}
+
+.parte2 ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2rem;
+    padding: 5rem 7%;
+}
+
+li{
+    max-width: 28rem;
+    background-color: white;
+}
+
+li::before{
+    content:'';
+    background-color: rgb(84, 218, 84);
+    height: 18rem;
+    width: 28rem;
+    display: block;
+    
+}
+
+li p{
+    line-height: 3rem;
+    color: grey;
+    margin: 1.5rem;
+}
+
+/* Section 3 */
+
+.parte3 div{
+    display: grid;
+    justify-content: center;
+    font-size: 2.5rem;
+    width: 500px;
+    grid-template-rows: repeat(7, 1fr);
+    height: 40rem;
+    margin: 0 auto;
+}
+
+.parte3 h2{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.parte3{
+    background-color: var(--azul-fraco);
+    padding: 5rem;
+    justify-content: center;
+}
+
+input{
+    border: none;
+    border-radius: 5px;
+    width: 40rem;
+    padding: .5rem .5rem;
+    height: 4rem;
+    
+}
+
+#mensagem{
+    grid-row: 5/7;
+    height: 10rem;
+}
+
+.submit{
+    width: 41rem;
+}
+
+.submit:hover, button:hover{
+    color: var(--azul-forte);
+    background-color: white;
+}

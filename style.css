@@ -1,0 +1,398 @@
+/* assets ----------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
+
+:root{
+    --preto-1: #171717;
+    --preto-2: #212121;
+    --preto-3: #333;
+    --preto-4: #828282;
+    --branco: #f9f9f9;
+    --verde: #00df5e;
+}
+
+/* reset ------------------------------ */
+
+*{
+    color: white;
+    font-family: 'DM Sans';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--preto-1);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+img{
+    width: 20rem;
+    display: block;
+}
+
+/* javascript ------------------------- */
+
+.btn-mobile{
+    display: none;
+}
+
+@media(max-width:740px){
+    #link-container{
+        display: none;
+    }
+
+    .btn-mobile{
+        margin-bottom: 10px;
+        display: block;
+        height: 2px;
+        width: 30px;
+        background-color: var(--verde);
+        border: none;
+    }
+    .btn-mobile::after, .btn-mobile::before{
+        position: relative;
+        content: '';
+        display: block;
+        height: 2px;
+        width: 30px;
+        background-color: var(--verde);
+    }
+    .btn-mobile::after{
+        margin-top: 10px;
+    }
+    .btn-mobile::before{
+        margin-top: 11px;
+    }
+}
+
+.ativo{
+    height: 14rem;
+    display: block !important;
+    position: absolute;
+    width: 20rem;
+    background-color: var(--preto-1);
+    border: 1px solid var(--verde);
+    top: 68px;
+    right: 0;
+    padding: 2rem 0 0 2rem;
+    animation: puxa-vinheta .5s;
+}
+
+.ativo a{
+    height: 5rem !important;
+}
+
+@keyframes puxa-vinheta {
+    0%{
+        right: -200px;
+    }
+    100%{
+        right: 0;
+    }
+}
+
+/* header ----------------------------- */
+header, main, #link-container, #info-container{
+    display: flex;
+}
+
+main, #about-me, #projects, #services, #skills{
+    width: 80vw;
+    margin: 0 10vw;
+}
+
+header{
+    width: 100%;
+    background-color: var(--preto-1);
+    font-size: 1.8rem;
+    padding: 2rem 10%;
+    justify-content: space-between;
+}
+
+#link-container a{
+    margin: 0 2rem;
+}
+
+/* main ------------------------------- */
+
+main div div{
+    display: flex;
+}
+
+main div{
+    align-self: center;
+}
+
+main img{
+    width: 30rem;
+}
+
+main, #about-me, #info-container, #projects, #services, #skills{
+    padding-top: 5rem;
+}
+
+main{
+    font-size: 1.8rem;
+    justify-content: space-between;
+}
+
+h1{
+    grid-column: 1;
+    width: 28rem;
+}
+
+p{
+    color: var(--preto-4);
+}
+#contact{
+    border: 2px solid var(--preto-3);
+}
+
+#download, #contact{
+    align-self: center;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    display: block;
+    margin: 2rem 1rem 0 0;
+}
+
+#download{
+    background-color: var(--verde);
+    color: var(--preto-2);
+}
+
+#contact:hover{
+    transition: .3s;
+    background-color: var(--verde);
+    color: var(--preto-1);
+}
+
+/* about me --------------------------- */
+
+#about-me{
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+h2{
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 4rem 0 2rem 0;
+}
+
+#info-container{
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+}
+
+#info-container img{
+    background-color: var(--preto-2);
+    border-radius: 5rem;
+    padding: 1rem;
+    margin: 0 auto;
+    width: 4rem;
+}
+
+#info-container div{
+    margin: 0 2rem;
+}
+
+/* projects --------------------------- */
+
+#info-container, #projects-container, #services-container, #skills-container{
+    display: grid;
+}
+
+#projects-container, #services-container{
+    margin: 0 auto;
+    max-width: 98.8rem;
+    font-size: 1.8rem;
+    grid-gap: 1rem 2rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#projects-container img{
+    width: 100%;
+}
+
+#projects-container div{
+    min-width: 25rem;
+    max-width: 33rem;
+    height: 25rem;
+    padding: 2rem;
+    background-color: var(--preto-2);
+}
+
+h5{
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+#empty{
+    padding: 2rem;
+    height: 10rem;
+}
+
+/* services --------------------------- */
+
+#service-card, #services img{
+    background-color: var(--preto-2);
+}
+
+#services img{
+    width: 5rem;
+    margin-bottom: 2rem;
+}
+
+#service-card{
+    padding: 2rem;
+    border-bottom: 2px solid var(--verde);
+}
+
+
+#services h3{
+    width: 10rem;
+    color: var(--preto-4);
+}
+
+/* skills ----------------------------- */
+
+#skills-container{
+    grid-template-columns: repeat(6, 1fr);
+}
+
+#skills-container img{
+    width: 10rem;
+    height: 10rem;
+    padding: 2rem;
+    background-color: var(--preto-2);
+}
+
+/* footer ----------------------------- */
+
+footer{
+    background-color: var(--preto-2);
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 4rem;
+}
+
+footer p{
+    color: var(--branco);
+}
+
+footer span{
+    color: var(--verde);
+}
+
+/* responsive ------------------------- */
+
+@media(max-width:990px){
+    #projects-container, #skills-container{
+        grid-template: 1fr 1fr / repeat(2, 1fr);
+        width: max-content;
+    }
+    
+    #skills-container{
+        grid-gap: 2rem;
+    }
+}
+
+@media(max-width:850px){
+    main img{
+        display: none;
+    }
+
+    main div{
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    h1{
+        width: auto;
+    }
+
+    #download, #contact{
+        margin: 2rem 1rem;
+    }
+
+    #projects, #services{
+        width: 100%;
+        margin: 0;
+    }
+
+    #services-container{
+        margin: 0 10vw;
+    }
+}
+
+@media(max-width:740px){
+
+    #info-container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #projects-container{
+        grid-template-columns: 59.2rem;
+        width: 80%;
+        justify-content: center;
+    }
+
+    .project-card{
+        height: auto !important;
+    }
+    
+    #projects .project-card{
+        max-width: 80vw;
+        margin: 0 auto;
+        height: 40rem;
+    }
+
+    #services, .empty{
+        width: 100%;
+    }
+
+    /* mobile menu */
+
+    #link-container{
+        display: none;
+    }
+
+    .btn-mobile{
+        display: block;
+    }
+}
+
+@media(max-width:580px){
+    
+    #services-container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem 3rem;
+    }
+
+    #info-container{
+        grid-template-columns: 1fr;
+    }
+
+    #info-container div{
+        margin: 4rem 0 0;
+    }
+
+    footer{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media(max-width:450px){
+    #services-container{
+        grid-template-columns: 1fr;
+    }
+}

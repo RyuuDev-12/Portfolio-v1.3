@@ -1,0 +1,292 @@
+:root{
+    --roxo: #6610f2;
+    --cinza-escuro: #8a8a8a;
+    --cinza: #eaeaea;
+    --cinza-claro: #cecece;
+    --quase-branco: #f9f9f9;
+    --branco:   #fff;
+}
+
+/* reset */
+
+*{
+    color: #2f2f2f;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+img{
+    display: box;
+}
+
+body{
+    height: 100vh;
+}
+
+button, a{
+    font-weight: bold;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 10rem;
+    background-color: var(--branco);
+    cursor: pointer;
+    padding: 1rem 3rem;
+}
+
+/* javascript */
+
+.search-expand{
+    animation: search-div 1s;
+    width: 65vw;
+}
+
+.search-on{
+    animation: search 1s;   
+    transition: .5s;
+    display: inline;
+    width: 70%;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 50rem;
+    padding-left: 2rem;
+}
+
+@keyframes search{
+    0%{width: 0%;}
+    100%{width: 70%;}
+}
+@keyframes search-div {
+    0%{width: 10vw;}
+    100%{width: 65vw;}
+}
+
+/* header */
+
+h2{
+    align-self: center;
+}
+
+header{
+    font-size: 1.5rem;
+    display: flex;
+    padding: 2rem 10vw;
+    justify-content: space-between;
+}
+
+header div{
+    width: 25rem;
+    justify-content: space-between;
+    display: flex;
+}
+a{
+    padding-top: 1.4rem;
+    height: 5rem;
+    text-decoration: none;
+}
+
+input, .login{
+    display: none;
+}
+
+.search-icon{
+    padding: 1rem 1.2rem;
+}
+
+/* main */
+
+.imgs-container{
+    display: grid;
+    position: absolute;
+    grid-template: repeat(5, 1fr)/ repeat(9, 1fr);
+    width: 70vw;
+    margin: 0 auto;
+    top: 15vh;
+    left: 15vw;
+    z-index: -1;
+    justify-items: center;
+}
+
+.imgs-container img{
+    width: 9rem;
+}
+
+.img1, .img3{
+    grid-column: 1;
+}
+.img2, .img4{
+    grid-column: 9;
+}
+.img5{
+    grid-column: 5;
+    grid-row: 5;
+}
+
+.img3, .img4{
+    grid-row: 4;
+}
+
+main{
+    font-size: 2.5rem;
+    max-width: 60vw;
+    margin: 5rem auto 10rem;
+    text-align: center;
+}
+
+h1, h2, h3{
+    font-family: 'Lora';
+}
+
+main button{
+    font-size: 1.7rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    margin: 2rem 3rem;
+    font-weight: 500;
+}
+
+.main-btns{
+    width: 60rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.criar{
+    background-color: var(--roxo);
+    color: white;
+}
+
+/* section */
+
+section{
+    display: flex;
+    padding: 5rem;
+    max-width: 80rem;
+    margin: 20rem auto 0;
+    font-size: 1.5rem;
+    background-color: var(--cinza);
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+section div{
+    width: 35rem;
+}
+
+h3{
+    margin-bottom: 1rem;
+    color: var(--cinza-escuro);
+}
+
+h3::before{
+    content: '';
+    width: 2px;
+    height: 2.5rem;
+    background-color: var(--roxo);
+    display: inline-block;
+    margin: 0 .8rem -.6rem 0;
+}
+
+section i{
+    line-height: 2.5rem;
+    font-weight: 500;
+}
+
+/* responsivo */
+
+@media(max-width:1020px){
+    .imgs-container{
+        display: none;
+    }
+}
+
+@media(max-width:990px){
+    header, main, section{
+        width: 90vw;
+    }
+
+    main{
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+    header{
+        margin: 2rem auto;
+        padding: 0;
+    }
+
+    h1{
+        font-size: 5vw;
+    }
+    main p{
+        font-weight: bold;
+        font-size: 3vw;
+    }
+    main button{
+        margin: 3rem 0;
+    }
+    .main-btns{
+        width: 70vw;
+        position: absolute;
+        left: 15vw;
+        justify-content: space-between;
+    }
+}
+
+@media(max-width:890px){
+    h2{
+        font-size: 2.5rem;
+    }
+    section{
+        padding: 0;
+    }
+    section div{
+        padding: 3rem;
+        width: auto;
+    }
+
+    .login{
+        display: inline;
+        width: 2.5rem;
+    }
+    .login-text{
+        font-size: 0;
+        padding: 1rem 1.2rem;
+    }
+}
+
+
+@media (max-width:580px) {
+    header div{
+        width: 12rem;
+    }
+
+    h1{
+        font-size: 3rem;
+        width: 100%;
+    }
+
+    main{
+        max-width: 90vw;
+    }
+    
+    .main-btns{
+        width: 90vw;
+        left: 5vw;
+    }
+}
+
+@media (max-width:450px) {
+    h2{
+        font-size: 2rem;
+    }
+    main button{
+        padding: 1rem .5rem;
+        width: 15rem;
+    }
+}
