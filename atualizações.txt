@@ -1,3 +1,0 @@
-1 - Animação dos links internos no header - feito
-2 - Animar entrada de seções - feito
-4 - Desenvolver os designs no figma "atualizações de portfolio"
