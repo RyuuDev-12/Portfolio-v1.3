@@ -35,7 +35,7 @@ function scrollToSection(event){
 
 function scrollAnimation(){
   const sections = document.querySelectorAll('section, main')
-  const metadeAltura = window.innerHeight * 0.6
+  const metadeAltura = window.innerHeight * 0.8
   const cards = document.querySelectorAll('.project-card')
   sections[0].classList.add('show-section')
   sections[1].classList.add('show-section')
