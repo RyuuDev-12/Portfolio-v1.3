@@ -81,6 +81,7 @@ img{
     right: 0;
     padding: 2rem 0 0 2rem;
     animation: puxa-vinheta .5s;
+    z-index: 1;
 }
 
 .ativo a{
