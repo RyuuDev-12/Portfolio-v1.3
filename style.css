@@ -98,7 +98,7 @@ img{
 
 main, section, .project-card{
     opacity: 0;
-    transform: translateX(10rem);
+    transform: translateX(5rem);
 }
 
 .show-section{
