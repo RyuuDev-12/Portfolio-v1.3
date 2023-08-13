@@ -154,6 +154,16 @@ div a:hover::after{
 /* responsive */
 
 @media(max-width:860px){
+    main ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+
+    li{
+        margin: 0;
+    }
+
     main{
         grid-template-areas: 
         "h1"
