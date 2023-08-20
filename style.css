@@ -26,11 +26,11 @@ body{
     background-color: var(--preto-1);
 }
 
-::-webkit-scrollbar{
+body::-webkit-scrollbar{
     background-color: var(--preto-2);
 }
 
-::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb{
     border: 5px solid var(--preto-2);
     border-radius: 10rem;
     background-color: var(--verde);
