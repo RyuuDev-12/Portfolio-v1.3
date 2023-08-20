@@ -26,6 +26,16 @@ body{
     background-color: var(--preto-1);
 }
 
+::-webkit-scrollbar{
+    background-color: var(--preto-2);
+}
+
+::-webkit-scrollbar-thumb{
+    border: 5px solid var(--preto-2);
+    border-radius: 10rem;
+    background-color: var(--verde);
+}
+
 html{
     font-size: 62.5%;
 }
@@ -73,7 +83,7 @@ img{
 
     .animar::before{
         margin: 0;
-        opacity: 0;
+        opacity: 1;
     }
 
     .animar::after{
