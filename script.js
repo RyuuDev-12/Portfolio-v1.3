@@ -19,6 +19,7 @@ function mobile(){
   
   btnMobile.addEventListener('click', function(){
       div.classList.toggle('ativo')
+      btnMobile.classList.toggle('animar')
   })
 }
 
@@ -34,24 +35,16 @@ function scrollToSection(event){
 }
 
 function scrollAnimation(){
-  const sections = document.querySelectorAll('section, main')
-  const metadeAltura = window.innerHeight * 0.8
-  const cards = document.querySelectorAll('.project-card')
-  sections[0].classList.add('show-section')
-  sections[1].classList.add('show-section')
-  cards[0].classList.add('show-section')
-
-  window.addEventListener('scroll', function(){
-    animation(sections)
-    animation(cards)
-  })
-
-  function animation(elements){
-    elements.forEach(item =>{
-      
-      if((item.getBoundingClientRect().top - metadeAltura) < 0){
-        item.classList.add('show-section')
+  const elements = document.querySelectorAll('section, .project-card, .info-card, main')
+  const myObserver = new IntersectionObserver((entries) =>{
+    entries.forEach(entry =>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('show-section')
       }
     })
-  }
+  })
+
+  elements.forEach(element =>{
+    myObserver.observe(element)
+  })
 }

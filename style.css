@@ -53,6 +53,7 @@ img{
         width: 30px;
         background-color: var(--verde);
         border: none;
+        transition: .5s
     }
     .btn-mobile::after, .btn-mobile::before{
         position: relative;
@@ -61,12 +62,30 @@ img{
         height: 2px;
         width: 30px;
         background-color: var(--verde);
+        transition: .5s;
     }
     .btn-mobile::after{
         margin-top: 10px;
     }
     .btn-mobile::before{
         margin-top: 11px;
+    }
+
+    .animar::before{
+        margin: 0;
+        opacity: 0;
+    }
+
+    .animar::after{
+        transform: rotate(-90deg);
+        position: absolute;
+        top: -1rem;
+    }
+
+    .animar{
+        top: 0;
+        margin-top: 1rem;
+        transform: rotate(45deg)
     }
 }
 
@@ -75,7 +94,7 @@ img{
     display: block !important;
     position: absolute;
     width: 20rem;
-    background-color: var(--preto-1);
+    background: var(--preto-1);
     border: 1px solid var(--verde);
     top: 68px;
     right: 0;
@@ -90,16 +109,17 @@ img{
 
 @keyframes puxa-vinheta {
     0%{
-        right: -200px;
+        right: -20rem;
     }
     100%{
         right: 0;
     }
 }
 
-main, section, .project-card{
+section, .project-card, .info-card, main{
     opacity: 0;
-    transform: translateX(5rem);
+    margin:0;
+    transform: translateX(-100%);
 }
 
 .show-section{
@@ -397,7 +417,7 @@ h2{
 
 footer{
     background-color: var(--preto-2);
-    padding: 2rem 0;
+    padding: 2rem;
     text-align: center;
     font-size: 2rem;
     margin-top: 4rem;
