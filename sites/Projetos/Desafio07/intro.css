@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
+
+:root{
+    --preto-1: #171717;
+    --preto-2: #212121;
+    --preto-3: #333;
+    --preto-4: #828282;
+    --branco: #f9f9f9;
+    --verde: #00df5e;
+}
+
+/* reset ------------------------------ */
+
+*{
+    color: white;
+    font-family: 'DM Sans';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-image: linear-gradient(to top left, var(--preto-1) 60%, var(--verde));
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+img{
+    width: 20rem;
+    display: block;
+}
+
+/* section ------------------------------------ */
+
+
+body > a{
+    font-size: 2rem;
+    display: block;
+    margin: 10rem 5vw 2rem;
+    background-color: var(--preto-2);
+    color: var(--verde);
+    width: max-content;
+    padding: 1rem 2rem;
+    font-weight: bold;
+}
+
+body > a:hover{
+    background-color: var(--verde);
+    color: var(--preto-2);
+    transition: .5s;
+}
+
+main{
+    margin: 0 5vw;
+    width: 90vw;
+    height: 30vw;
+    display: grid;
+    grid-gap: 2rem 5rem;
+    grid-template-areas: 
+    "h1 h1 img"
+    "desc desc img"
+    "h2 h2 img"
+    "tec tec img"
+    "progress progress img"
+    "div div img";
+    font-size: 2rem;
+}
+
+h1{
+    grid-area: h1;
+}
+
+img{
+    width: calc(40vw * 1.2);
+    grid-area: img;
+}
+
+p{
+    grid-area: desc;
+}
+
+h2{
+    font-size: 2rem;
+    grid-area: h2;
+}
+
+ul{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    grid-area: tec;
+}
+
+li{
+    background-color: var(--preto-3);
+    align-self: center;
+    padding: 1rem 2rem;
+    margin-right: 2rem;
+    color: var(--verde);
+}
+
+main div{
+    grid-area: div;
+    display: flex;
+}
+
+div a{
+    font-weight: bold;
+    padding: 1rem 2rem;
+    max-width: 40rem;
+    width: 48%;
+    align-self: center;
+    text-align: center;
+}
+
+#github{
+    margin-right: 2rem;
+    background-color: var(--preto-3);
+}
+
+#access{
+    background-color: var(--verde);
+    color: #171717;
+}
+
+#access:hover{
+    background-color: var(--preto-2);
+    color: var(--branco);
+}
+
+div a:hover::after{
+    content: '';
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: var(--verde);
+    transition: .3s;
+    animation: hover .5s;
+    bottom: 0;
+}
+
+@keyframes hover {
+    0%{width: 0%;}
+    100%{width: 100%;}
+}
+
+/* responsive */
+
+@media(max-width:860px){
+    main ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+
+    li{
+        margin: 0;
+    }
+
+    main{
+        grid-template-areas: 
+        "h1"
+        "desc"
+        "h2"
+        "tec"
+        "img"
+        "div";
+    }
+
+    img{
+        width: 100%;
+    }
+}
