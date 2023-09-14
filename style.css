@@ -408,7 +408,7 @@ h2{
 }
 /* services --------------------------- */
 
-#service-card, #services img{
+.service-card, #services img{
     background-color: var(--preto-2);
 }
 
@@ -417,7 +417,7 @@ h2{
     margin-bottom: 2rem;
 }
 
-#service-card{
+.service-card{
     padding: 2rem;
     border-bottom: 2px solid var(--verde);
 }
@@ -431,10 +431,14 @@ h2{
 /* skills ----------------------------- */
 
 #skills-container{
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
 }
 
 #skills-container img{
+    display: block;
     width: 10rem;
     height: 10rem;
     padding: 2rem;
@@ -471,10 +475,10 @@ footer span{
         grid-template-columns: 1fr 1fr;
     }
 
-    #skills-container{
+    /* #skills-container{
         grid-template: 1fr 1fr / repeat(2, 1fr);
         width: max-content;
-    }
+    } */
     
     #skills-container{
         grid-gap: 2rem;
@@ -582,7 +586,7 @@ footer span{
         height: 40rem;
     }
 
-    #services, .empty{
+    .empty{
         width: 100%;
     }
 
